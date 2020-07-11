@@ -210,6 +210,7 @@ async def call_apropriate_function(
     response = {}
     LOGGER.info(response)
     user_id = user_message.from_user.id
+    print(user_id)
     final_response = await upload_to_tg(
         sent_message_to_update_tg_p,
         to_upload_file,
@@ -235,7 +236,7 @@ async def call_apropriate_function(
         message_to_send = message_to_send + "\n\n" + "#uploads"
     else:
         message_to_send = "<i>FAILED</i> to upload files. 😞😞"
-    await sent_message_to_update_tg_p.reply_to_message.reply_text(
+    await user_mesage.reply_text(
         text=message_to_send,
         quote=True,
         disable_web_page_preview=True
