@@ -208,7 +208,7 @@ async def call_apropriate_function(
     #
     response = {}
     LOGGER.info(response)
-    user_id = sent_message_to_update_tg_p.from_user.id
+    user_id = user_message.from_user.id
     final_response = await upload_to_tg(
         sent_message_to_update_tg_p,
         to_upload_file,
