@@ -31,10 +31,12 @@ from tobrot.helper_funcs.upload_to_tg import upload_to_tg, upload_to_gdrive
 async def youtube_dl_call_back(bot, update):
     LOGGER.info(update)
     cb_data = update.data
-    get_cf_name = update.message.text
-    LOGGER.info(get_cf_name)
+    get_cf_name = update.message.caption
+    #LOGGER.info(get_cf_name)
+    cf_name = ""
     if "|" in get_cf_name:
         cf_name = get_cf_name.split("|", maxsplit=1)[1]
+        cf_name = cf_name.strip()
     # youtube_dl extractors
     tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("|")
     #
