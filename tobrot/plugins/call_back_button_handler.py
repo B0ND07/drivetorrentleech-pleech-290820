@@ -44,7 +44,7 @@ async def button(bot, update: CallbackQuery):
                     if os.path.exists(file_name):
                         try:
                             if os.path.isdir(file_name):
-                                sutil.rmtree(file_name)
+                                shutil.rmtree(file_name)
                             else:
                                 os.remove(file_name)
                         except:
