@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("""Bot Created By-- @RiDerOO7\n\n And also don't Spam Me</a>""", disable_web_page_preview=True)
+    await message.reply_text("""Commands\n\n /leech - leeching\n\n /gleech - leech to cloud\n\n /ytdl - youtube downld\n\n /tleech - tg file to drive Bot Created By-- @RiDerOO7</a>""", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):
